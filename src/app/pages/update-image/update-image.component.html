@@ -1,0 +1,18 @@
+<div class="container-login">
+    <div class="container-form">
+      <p class="titulo-login">Nuevo Tabaco</p>
+        <label>Nombre tabaco</label>
+      <form class="form-login" (ngSubmit)="updateImage()" [formGroup]="myForm" autocomplete="off">
+        <div class="elemento-form">
+            <input type="file"
+            class="input-nombre"
+            placeholder="Nombre del tabaco"
+            formControlName="image">
+        </div>
+        <div class="grid-botones">
+            <button class="boton" type="submit">Guardar cambios</button>
+            <button class="boton-cancelar" type="button" [routerLink]="['/pages/category']">Cancelar</button>
+          </div>
+      </form>
+    </div>
+</div>

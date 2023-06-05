@@ -1,0 +1,66 @@
+
+    .img{
+        text-align: center;
+    }
+
+    .brg{
+        background-color: beige;
+        color: aliceblue;
+        height: 1000px;
+    }
+
+    .card{
+        height: 750px;
+        width: 600px;
+        margin-top: auto;
+        margin-bottom: auto;
+        background:rgb(7, 17, 9);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+    }
+
+    .mb-5{
+        color: aliceblue;
+    }
+
+    .loginin{
+        color: aliceblue;
+    }
+
+    .hav{
+        color: aliceblue;
+    }
+    .buttonn{
+        color: white !important;
+        background: rgb(82, 80, 80);
+        background-color: rgb(82, 80, 80);
+    }
+
+    .login_btn {
+        width: 100%;
+        background: rgb(82, 80, 80) !important;
+        color: white !important;
+    }
+
+    .brand_logo_container {
+        position: absolute;
+        height: 170px;
+        width: 170px;
+        top: -75px;
+        border-radius: 50%;
+        background: rgb(82, 80, 80);
+        padding: 10px;
+        text-align: center;
+    }
+    .brand_logo {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 2px solid white;
+    }

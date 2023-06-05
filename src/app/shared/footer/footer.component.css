@@ -1,0 +1,92 @@
+footer{
+    background-color: rgb(7, 17, 9);
+    color: white;
+    width: 100%;
+  }
+
+  a:link{
+      color: white;   text-decoration: none;
+  }
+
+  a:visited{
+      color: white;   text-decoration: none;
+  }
+
+  a:hover { color: white;  text-decoration: none; }
+
+  *{outline:none !important;}*:focus {outline: none !important;}textarea:focus, input:focus{outline: none !important;}	a{text-decoration: none !important;outline: none !important;}
+
+  .grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  }
+
+  .image{
+      grid-column: 3/4;
+      grid-row: 1/2;
+      text-align: center;
+
+  }
+
+  .products{
+      grid-column: 1/2;
+      grid-row: 2/3;
+      text-align: center;
+      margin: auto;
+      
+  }
+
+  .portraits{
+      grid-column: 2/3;
+      grid-row: 2/3;
+      text-align: center;
+      margin: auto;
+      
+  }
+
+  .aboutUs{
+      grid-column: 3/4;
+      grid-row: 2/3;
+      text-align: center;
+      margin: auto;
+      
+  }
+
+  .contact{
+      grid-column: 4/5;
+      grid-row: 2/3;
+      text-align: center;
+      margin: auto;
+
+  }
+
+  .location{
+      grid-column: 5/6;
+      grid-row: 2/3;
+      text-align: center;
+      margin: auto;
+
+  }
+
+  .socialmedia{
+      grid-column: 3/4;
+      grid-row: 3/4;
+      margin: auto;
+  }
+
+  .locationDescription{
+      grid-column: 2/5;
+      grid-row: 4/5;
+      text-align: center;
+      margin: auto;
+
+  }
+
+  .services{
+      grid-column: 2/5;
+      grid-row: 5/6;
+      text-align: center;
+      margin: auto;
+
+  }

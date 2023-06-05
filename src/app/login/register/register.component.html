@@ -1,0 +1,77 @@
+<div class="brg">
+<br>
+<br>
+<section class="vh-100 bg-image">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <br>
+          <br>
+          <div class="card" style="border-radius: 15px;">
+            <div class="d-flex justify-content-center">
+              <br>
+              <div class="brand_logo_container">
+                <img src="assets/logo.png" class="brand_logo" alt="Logo">
+              </div>
+            </div>
+            <div class="card-body p-5">
+              <br>
+              <br>
+              <br>
+
+              <form (ngSubmit)="registerSubmit()"  #myForm="ngForm">
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" required [ngModel]="initForm.username"
+                  name="username" placeholder="your username"/>
+                  <label class="form-label" for="form3Example1cg">Your UserName</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example4cdg" class="form-control form-control-lg" required [ngModel]="initForm.name"
+                  name="name" placeholder="name"/>
+                  <label class="form-label" for="form3Example4cdg">Your Name</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example4cg" class="form-control form-control-lg" required [ngModel]="initForm.email"
+                  name="email" placeholder="xxxxxx@gmail.com"/>
+                  <label class="form-label" for="form3Example4cg">Your Email</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example3cg" class="form-control form-control-lg" name="pass"
+                  [ngModel]="initForm.pass" required placeholder="**********"/>
+                  <label class="form-label" for="form3Example3cg">Your Password</label>
+                </div>
+
+
+
+                <div class="form-check d-flex mb-5">
+                  <input class="form-check-input me-2" type="checkbox" value="Aceptar" id="form2Example3cg" [required]=""/><br>
+                  
+                  <label class="form-check-label" for="form2Example3g">
+                    I agree all statements in Terms of service 
+                  </label>
+                </div>
+
+                <div class="buttonn">
+                  <button type="submit"
+                    class="btn  btn-block btn-lg login_btn">Register</button>
+                </div>
+
+                <p class="hav text-center text-muted mt-5 mb-0">Have already an account? <a [routerLink]="['/login/login']" routerLinkActive="router-link-active"
+                    class="loginin"><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<br>
+<br>
+</div>

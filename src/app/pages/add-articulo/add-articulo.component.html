@@ -1,0 +1,63 @@
+<div class="container-login">
+    <div class="container-form">
+      <p class="titulo-login">Nuevo articulo</p>
+        <label>Nombre articulo</label>
+      <form class="form-login" (ngSubmit)="addArticulo()" [formGroup]="myForm" autocomplete="off">
+        <div class="elemento-form">
+            <input type="text"
+            class="input-nombre"
+            placeholder="Nombre del tabaco"
+            formControlName="name">
+            <p class="form-text text-danger"
+                *ngIf="isValidField('name')">
+                     Debe tener 3 caracteres como mínimo
+            </p>
+        </div>
+        <label>Descripcion</label>
+        <div class="elemento-form-textarea">
+            <textarea type="text"
+            placeholder="Descripcion del tabaco"
+            formControlName="description"></textarea>
+            <p class="form-text text-danger"
+                *ngIf="isValidField('description')">
+                    Debe tener 10 caracteres como mínimo
+            </p>
+        </div>
+        <label>Precio</label>
+        <div class="input-number">
+            <input type="number"
+            placeholder="10"
+            formControlName="price" step=".01">
+            <p class="form-text text-danger"
+                *ngIf="isValidField('price')">
+                    Debe ser como minimo 1
+            </p>
+        </div>
+        <label>Stock</label>
+        <div class="input-number">
+            <input type="number"
+            placeholder="1"
+            formControlName="stock">
+            <p class="form-text text-danger"
+                *ngIf="isValidField('stock')">
+                    Minimo 1 el stock y maximo 10
+            </p>
+        </div>
+        <label>Id categoria</label>
+        <div class="input-number">
+            <input type="number"
+            placeholder="1"
+            formControlName="idCategory">
+            <p class="form-text text-danger"
+                *ngIf="isValidField('idCategory')">
+                    Minimo tienes que elegir la 1 categoria
+            </p>
+        </div>
+        <div class="grid-botones">
+          <button class="boton" type="submit">Guardar cambios</button>
+          <button class="boton-cancelar" type="button" [routerLink]="['/pages/category']">Cancelar</button>
+        </div>
+
+      </form>
+    </div>
+  </div>

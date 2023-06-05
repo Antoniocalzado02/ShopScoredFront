@@ -1,0 +1,29 @@
+<div class="navbar navbar-expand navbar-dark " style="background-color:rgb(82, 80, 80) ; color: black;">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <a href="index.html" class="navbar-brand"><img src="assets/logo.png" width="100px"></a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        <ul class="navbar-nav mr-auto">
+            <h4><a href="#" class="nav-item active nav-link">Inicio</a></h4>
+            <div *ngIf="isLoggedIn()">
+            <h4><a [routerLink]="['/pages/category']" routerLinkActive="router-link-active" class="nav-item active nav-link">Catalogo</a></h4>
+            </div>
+            <h4><a href="#" [routerLink]="['/pages/article']" routerLinkActive="router-link-active" class="nav item active nav-link">Articulos</a></h4>
+            <div *ngIf="isLoggedIn()">
+                <a href="#" [routerLink]="['/pages/updateImage',username]" routerLinkActive="router-link-active" class="nav item active nav-link"><h4>Editar foto</h4></a>      
+            </div>
+            
+        </ul>
+
+        <div *ngIf="!isLoggedIn()">
+            <a [routerLink]="['/login/login']" routerLinkActive="router-link-active"  class="navbar-brand"><button type="submit"><img class="img" src="assets/login.png" width="30px"></button></a>
+        </div>
+        <div *ngIf="isLoggedIn()">
+            <button type="button" class="btn btn-outline-danger" style="margin-left: 10px;" (click)="logout()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5ZM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5Z"/>
+              </svg> Logout</button>
+        </div>
+    </div>
+  </div>
+    

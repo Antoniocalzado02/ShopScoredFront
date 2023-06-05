@@ -1,0 +1,46 @@
+<div class="container-login">
+    <div class="container-form">
+        <p class="titulo-login">Editar producto</p>
+
+        <form class="form-login" [formGroup]="myForm" autocomplete="off" (ngSubmit)="updateProduct()">
+           
+            <div class="elemento-form">
+                <p class="nombre-campo">Nombre</p>
+                <input type="text" class="input-nombre" placeholder="Nombre del producto" formControlName="name" required>
+                <p class="form-text text-danger" *ngIf="isValidField('name')">
+                    El nombre debe tener 3 caracteres como mínimo
+                </p>
+            </div>
+         
+            <div class="elemento-form-textarea">
+                <p class="nombre-campo">Descripcion</p>
+                <textarea type="text" placeholder="Descripcion del producto" formControlName="description" required></textarea>
+                <p class="form-text text-danger" *ngIf="isValidField('description')">
+                    La descripción debe tener 10 caracteres como mínimo
+                </p>
+            </div>
+           
+            <div class="elemento-form">
+                <p class="nombre-campo">Precio</p>
+                <input type="number" class="input-nombre" placeholder="Precio del producto" formControlName="price" required>
+                <p class="form-text text-danger" *ngIf="isValidField('price')">
+                    El precio no puede ser inferior a 0
+                </p>
+            </div>
+            
+            <div class="elemento-form">
+                <p class="nombre-campo">Stock</p>
+                <input type="number" class="input-nombre" placeholder="Stock del producto" formControlName="stock" required>
+                <p class="form-text text-danger" *ngIf="isValidField('stock')">
+                    El stock no puede ser inferior a 0
+                </p>
+            </div>
+
+            <div class="grid-botones">
+                <button class="boton" type="submit">Guardar cambios</button>
+                <button class="boton-cancelar" type="button" [routerLink]="['/page/articles']">Cancelar</button>
+            </div>
+
+        </form>
+    </div>
+</div>
