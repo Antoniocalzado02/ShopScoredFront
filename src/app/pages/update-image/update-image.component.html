@@ -2,7 +2,7 @@
     <div class="container-form">
       <p class="titulo-login">Nuevo Tabaco</p>
         <label>Nombre tabaco</label>
-      <form class="form-login" (ngSubmit)="updateImage()" [formGroup]="myForm" autocomplete="off">
+      <form class="form-login" (ngSubmit)="updateImage()" [formGroup]="myForm" autocomplete="off" enctype="multipart/form-data">
         <div class="elemento-form">
             <input type="file"
             class="input-nombre"
