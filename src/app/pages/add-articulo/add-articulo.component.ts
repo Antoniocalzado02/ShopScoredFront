@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { articlesService } from 'src/app/auth/article.service';
 import Swal from 'sweetalert2';
 import { Content } from '../../interfaces/category.interface';
+import { categoryService } from 'src/app/auth/category.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-add-articulo',
@@ -11,9 +13,25 @@ import { Content } from '../../interfaces/category.interface';
   styleUrls: ['./add-articulo.component.css']
 })
 export class AddArticuloComponent {
-  constructor(private fb: FormBuilder, private articleService:articlesService, private route:Router) { }
+  constructor(private fb: FormBuilder, private articleService:articlesService, private route:Router, private categoryService: categoryService ) { }
  
+  dtTrigger: Subject<any>=new Subject<any>();
+  ngOnInit(): void {
 
+  
+
+    this.categoryService.getCategorias(999)
+    .subscribe({
+      next: (resp)=>{
+        this.lista=resp.content
+        this.dtTrigger.next(this.lista)
+      },
+      error: (error)=>{
+        console.log(error)
+      }
+    })
+
+  }
   lista:Content[]=[]
 
  
@@ -48,7 +66,7 @@ export class AddArticuloComponent {
               title: 'Categoria añadida correctamente',
               text: 'Nombre: '+this.myForm.value.name+', descripcion: '+this.myForm.value.description
             })
-            this.route.navigate(["/pages/tabacos"])
+            this.route.navigate(["/pages/article"])
           }
           else{
             Swal.fire({

@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { articlesService } from 'src/app/auth/article.service';
 import { categoryService } from 'src/app/auth/category.service';
+import { Articles } from 'src/app/interfaces/articles.interface';
+import { Content } from 'src/app/interfaces/category.interface';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -16,6 +18,8 @@ export class EditArticuloComponent {
 
   idProducto!: number
 
+  article!:Content
+
   listaCategorias: any[] = []
 
   myForm: FormGroup = this.fb.group({
@@ -28,16 +32,19 @@ export class EditArticuloComponent {
 
   ngOnInit(): void {
     this.idProducto = this.aRoute.snapshot.params['id']
+console.log(this.idProducto)
 
-    this.articleService.getProductsById(this.idProducto)
+    this.articleService.getProductsByIds(this.idProducto)
       .subscribe({
         next: (resp) => {
+          console.log(resp)
+          this.article=resp
           if (resp) {
             this.myForm.reset({
-              nombre: resp.nombre,
-              descripcion: resp.descripcion,
+              name: resp.name,
+              description: resp.description,
               price: resp.price,
-              stock: resp.stock,
+              stock: resp.stock
             })
           }
           else {
@@ -68,7 +75,7 @@ export class EditArticuloComponent {
   }
 
   updateProduct() {
-    this.articleService.updateProduct(this.idProducto, this.myForm.value.name, this.myForm.value.description, this.myForm.value.price, this.myForm.value.stock)
+    this.articleService.updateProduct( this.myForm.value.name, this.myForm.value.description, this.myForm.value.price, this.myForm.value.stock,this.idProducto)
       .subscribe({
         next: (resp) => {
           if (resp) {

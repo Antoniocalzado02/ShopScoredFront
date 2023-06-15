@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, switchMap, of, catchError } from 'rxjs';
-import { Articles } from "../interfaces/tabacos.interface";
+import { Articles } from "../interfaces/articles.interface";
 
 
 @Injectable({
@@ -14,8 +14,11 @@ export class articlesService{
 
     urls:string='http://localhost:9061/articulo'
 
+    httpOptions = {headers: new HttpHeaders({ 'Content-Type': 'application/json' })     };
 
-    constructor(private http:HttpClient){}
+    constructor(private http:HttpClient){
+
+    }
 
     getProducts():Observable<any>{
         return this.http.get<any>(this.url)
@@ -25,18 +28,22 @@ export class articlesService{
         return this.http.get<any>(this.urls+"/"+id)
     }
 
+    getProductsByIds(id:number):Observable<any>{
+      return this.http.get<any>(this.url+"/"+id)
+  }
+
     
 
     addProduct(name:string, description:string, price:number, stock:number, idCategory:number):Observable<boolean>{
      console.log(name, description, price, stock, idCategory);
      
-      return this.http.post<any>(this.url, {
+      return this.http.post<any>(this.urls+"/"+idCategory, {
         "name": name,
         "description":description,
         "price": price,
-        "stock": stock,
-        "idCategory": idCategory
-      })
+        "stock": stock
+
+      }, this.httpOptions)
       .pipe( switchMap(resp => {
         return of(true);
       }),catchError(error => {
@@ -46,8 +53,8 @@ export class articlesService{
     }
 
 
-    updateProduct(idProducto:number, name:string, description:string, price:number, stock:number):Observable<boolean>{
-      return this.http.put<any>(this.url+'/'+idProducto, {
+    updateProduct( name:string, description:string, price:number, stock:number,idProducto:number):Observable<boolean>{
+      return this.http.put<any>(this.urls+'/'+idProducto, {
         "name": name,
         "description":description,
         "price": price,

@@ -43,15 +43,11 @@
                     Minimo 1 el stock y maximo 10
             </p>
         </div>
+        <div>
         <label>Id categoria</label>
-        <div class="input-number">
-            <input type="number"
-            placeholder="1"
-            formControlName="idCategory">
-            <p class="form-text text-danger"
-                *ngIf="isValidField('idCategory')">
-                    Minimo tienes que elegir la 1 categoria
-            </p>
+        <select formControlName="idCategory">
+            <option *ngFor="let categoria of lista" [value]="categoria.id" >{{categoria.name}}</option>
+        </select>
         </div>
         <div class="grid-botones">
           <button class="boton" type="submit">Guardar cambios</button>

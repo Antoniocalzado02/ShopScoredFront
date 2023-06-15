@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { articlesService } from 'src/app/auth/article.service';
-import { Content } from 'src/app/interfaces/tabacos.interface';
+import { Content } from 'src/app/interfaces/articles.interface';
 import Swal from 'sweetalert2';
 
 @Component({

@@ -5,8 +5,8 @@
         <form class="form-login" [formGroup]="myForm" autocomplete="off" (ngSubmit)="updateProduct()">
            
             <div class="elemento-form">
-                <p class="nombre-campo">Nombre</p>
-                <input type="text" class="input-nombre" placeholder="Nombre del producto" formControlName="name" required>
+                <p class="nombre-campo">Name</p>
+                <input type="text" class="input-nombre" placeholder="Nombre articulo"  formControlName="name" required>
                 <p class="form-text text-danger" *ngIf="isValidField('name')">
                     El nombre debe tener 3 caracteres como mínimo
                 </p>
