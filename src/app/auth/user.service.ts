@@ -32,8 +32,8 @@ import { DecodeToken } from '../interfaces/decode-token.interface';
         return this.http.get<any>(this.url+"/"+username)
       }
 
-    updateImage(username:string,image:string){
-      return this.http.post<any>(this.urls+"/"+username, this.httpOptions)
+    updateImage(username:string,image:File){
+      return this.http.post<any>(this.urls+"/"+username,{"file":image} ,this.httpOptions)
       .pipe(switchMap(resp=>{
         return of (true)
       }),catchError(error=>{

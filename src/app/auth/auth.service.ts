@@ -12,7 +12,7 @@ import { DecodeToken } from '../interfaces/decode-token.interface';
 
   export class authService{
 
-    url:string = 'http://localhost:9061'
+    url:string = 'https://shopscoredapi-production.up.railway.app'
     httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
         Authorization: 'Bearer' + localStorage.getItem('token')
