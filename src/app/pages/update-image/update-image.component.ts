@@ -18,7 +18,7 @@ export class UpdateImageComponent {
   selectedImage!: File;
 
   myForm: FormGroup = this.fb.group({
-    image: ['', [Validators.required, Validators.minLength(3)]]
+    image: File
   })
   constructor(private fb: FormBuilder, private userService: userService,
     private route: Router, private aRoute: ActivatedRoute) { }
