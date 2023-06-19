@@ -8,6 +8,7 @@ import { CartComponent } from './cart/cart.component';
 import { CategoryComponent } from './category/category.component';
 import { EditArticuloComponent } from './edit-articulo/edit-articulo.component';
 import { UpdateImageComponent } from './update-image/update-image.component';
+import { EditCategoriesComponent } from './edit-categories/edit-categories.component';
 
 
 const routes: Routes = [
@@ -49,6 +50,11 @@ const routes: Routes = [
     {
         path: 'updateImage/:username',
         component: UpdateImageComponent,
+        pathMatch: 'full'
+    },
+    {
+        path: 'editCategories/:id',
+        component: EditCategoriesComponent,
         pathMatch: 'full'
     }
 

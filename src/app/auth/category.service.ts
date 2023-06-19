@@ -41,8 +41,8 @@ export class categoryService{
       )
     }
     
-    editarCategoria(id:number, nombre:string, descripcion:string):Observable<boolean>{
-      return this.http.put<any>(this.url+'/'+id,{"nombre":nombre, "descripcion":descripcion},this.httpOptions)
+    editarCategoria(id:number, name:string, description:string):Observable<boolean>{
+      return this.http.put<any>(this.url+'/'+id,{"name":name, "description":description},this.httpOptions)
       .pipe(switchMap(resp=>{
         return of (true)
       }),catchError(error=>{
@@ -53,6 +53,10 @@ export class categoryService{
 
     getCategoriaById(id:number):Observable<Category>{
       return this.http.get<Category>(this.url+'/'+id)
+    }
+
+    getCategoriaByIds(id:number):Observable<Content>{
+      return this.http.get<Content>(this.url+'/'+id)
     }
 
 

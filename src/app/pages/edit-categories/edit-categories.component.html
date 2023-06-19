@@ -1,0 +1,28 @@
+<div *ngIf="loading" class="overlay"></div>
+<div *ngIf="loading" class="spinner">
+  <mat-spinner></mat-spinner>
+</div>
+<div class="container-login">
+  <div class="container-form">
+    <p class="titulo-login">Editar categoria</p>
+
+    <form class="form-login" (ngSubmit)="editarCategoria()" [formGroup]="myForm" autocomplete="off">
+      <div class="elemento-form">
+        <input type="text" class="input-nombre" placeholder="Nombre de la categoria" formControlName="name">
+        <p class="form-text text-danger" *ngIf="isValidField('name')">
+          Debe tener 3 caracteres como mínimo y 20 caracteres como máximo
+        </p>
+      </div>
+      <div class="elemento-form-textarea">
+        <textarea type="text" placeholder="Descripcion de la categoria" formControlName="description"></textarea>
+        <p class="form-text text-danger" *ngIf="isValidField('description')">
+          Debe tener 10 caracteres como mínimo
+        </p>
+      </div>
+      <div class="grid-botones">
+        <button class="boton" type="submit">Guardar cambios</button>
+        <button class="boton-cancelar" type="button" [routerLink]="['/categoria']">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddArticuloComponent } from './add-articulo/add-articulo.component';
 import { EditArticuloComponent } from './edit-articulo/edit-articulo.component';
 import { UpdateImageComponent } from './update-image/update-image.component';
+import { EditCategoriesComponent } from './edit-categories/edit-categories.component';
 
 
 
@@ -25,7 +26,8 @@ import { UpdateImageComponent } from './update-image/update-image.component';
     AddCategorieComponent,
     AddArticuloComponent,
     EditArticuloComponent,
-    UpdateImageComponent
+    UpdateImageComponent,
+    EditCategoriesComponent
   ],
   imports: [
     CommonModule,
