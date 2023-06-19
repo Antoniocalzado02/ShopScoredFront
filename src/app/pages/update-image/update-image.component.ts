@@ -60,7 +60,7 @@ export class UpdateImageComponent {
             Swal.fire({
               icon: 'success',
               title: 'Categoria añadida correctamente',
-              text: 'Imagen: '+this.myForm.value.image
+              text: 'Imagen añadida correctamente'
             })
           }
     
