@@ -15,6 +15,8 @@ export class UpdateImageComponent {
   user!:User;
   username!:string
 
+  selectedImage!: File;
+
   myForm: FormGroup = this.fb.group({
     image: ['', [Validators.required, Validators.minLength(3)]]
   })
@@ -24,6 +26,12 @@ export class UpdateImageComponent {
     ngOnInit(): void{
       this.username=this.aRoute.snapshot.params["username"]
     }
+
+
+
+  onFileSelected(event: any) {
+    this.selectedImage = event.target.files[0];
+  }
 
     getUser(username:string){
       this.userService.getUser(username)
