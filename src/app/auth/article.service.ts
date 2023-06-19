@@ -10,9 +10,9 @@ import { Articles } from "../interfaces/articles.interface";
 
 export class articlesService{
 
-    url:string='http://localhost:9061/articulos'
+    url:string='https://shopscoredapi-production.up.railway.app/articulos'
 
-    urls:string='http://localhost:9061/articulo'
+    urls:string='https://shopscoredapi-production.up.railway.app/articulo'
 
     httpOptions = {headers: new HttpHeaders({ 'Content-Type': 'application/json' })     };
 
@@ -52,7 +52,7 @@ export class articlesService{
       )
     }
 
-    
+
 
 
     updateProduct( name:string, description:string, price:number, stock:number,idProducto:number):Observable<boolean>{

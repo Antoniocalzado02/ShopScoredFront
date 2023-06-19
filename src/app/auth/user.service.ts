@@ -12,8 +12,8 @@ import { DecodeToken } from '../interfaces/decode-token.interface';
 
   export class userService{
 
-    url:string = 'http://localhost:9061/userGet'
-    urls:string='http://localhost:9061/updateImage'
+    url:string = 'https://shopscoredapi-production.up.railway.app/userGet'
+    urls:string='https://shopscoredapi-production.up.railway.app/updateImage'
     httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
         Authorization: 'Bearer' + localStorage.getItem('token')
