@@ -52,6 +52,8 @@ export class articlesService{
       )
     }
 
+    
+
 
     updateProduct( name:string, description:string, price:number, stock:number,idProducto:number):Observable<boolean>{
       return this.http.put<any>(this.urls+'/'+idProducto, {
