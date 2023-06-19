@@ -20,7 +20,41 @@ export class EditCategoriesComponent {
     name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
     description: [null, [Validators.required, Validators.minLength(10)]]
   })
-
+  ngOnInit(): void {
+    
+      this.categoriaService.getCategoriaByIds(this.activatedRoute.snapshot.params['id'])
+      .subscribe({
+        next: (resp) => {
+          if (resp) {
+            this.myForm.reset({
+              nombre: resp.name,
+              descripcion: resp.description
+            })
+            this.loading=false
+          }
+          else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Algo ha ido mal'
+            }).then((resp) => {
+              this.loading=false
+              this.route.navigateByUrl('/categoria')
+            })
+          }
+        }, error: (error) => {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Algo ha ido mal'
+          }).then((resp) => {
+            this.loading=false
+            this.route.navigateByUrl('/categoria')
+          })
+        }
+      })
+    
+  }
   getCategoriaById(){
     this.loading=true
     this.categoriaService.getCategoriaByIds(this.activatedRoute.snapshot.params['id'])
