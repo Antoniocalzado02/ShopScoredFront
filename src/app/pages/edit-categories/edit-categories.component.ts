@@ -62,7 +62,7 @@ export class EditCategoriesComponent {
     }
     else {
       this.loading=true
-      this.categoriaService.editarCategoria(this.activatedRoute.snapshot.params['id'], this.myForm.value.nombre, this.myForm.value.descripcion)
+      this.categoriaService.editarCategoria(this.activatedRoute.snapshot.params['id'], this.myForm.value.name, this.myForm.value.description)
         .subscribe({
           next: (resp) => {
             Swal.fire({
