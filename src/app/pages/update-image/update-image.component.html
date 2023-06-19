@@ -3,7 +3,7 @@
       <p class="titulo-login">Nuevo Foto de perfil</p>
         <label>Nuevo Foto de perfil</label>
         <form (ngSubmit)="updateImage()" #imageForm="ngForm">
-          <input type="file" name="image" (change)="onFileSelected($event)" />
+          <input type="file" name="image" (change)="onFileSelected($event)" formControlName="image" />
           <button type="submit">Subir imagen</button>
         </form>
         
