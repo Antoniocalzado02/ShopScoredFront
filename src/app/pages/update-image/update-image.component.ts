@@ -52,6 +52,7 @@ export class UpdateImageComponent {
               title: 'Oops...',
               text: 'No se pudo añadir la categoria'
             })
+            console.log(resp)
           }
     
         }
