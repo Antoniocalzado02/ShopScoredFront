@@ -47,20 +47,21 @@ export class UpdateImageComponent {
       .subscribe({
         next: (resp)=>{
           if(resp){
-            Swal.fire({
-              icon: 'success',
-              title: 'Categoria añadida correctamente',
-              text: 'Imagen: '+this.myForm.value.image
-            })
-            this.route.navigate(["/home"])
-          }
-          else{
+            
             Swal.fire({
               icon: 'error',
               title: 'Oops...',
               text: 'No se pudo añadir la categoria'
             })
+            this.route.navigate(["/home"])
+          }
+          else{
             console.log(resp)
+            Swal.fire({
+              icon: 'success',
+              title: 'Categoria añadida correctamente',
+              text: 'Imagen: '+this.myForm.value.image
+            })
           }
     
         }
