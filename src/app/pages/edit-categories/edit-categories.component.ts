@@ -27,8 +27,8 @@ export class EditCategoriesComponent {
         next: (resp) => {
           if (resp) {
             this.myForm.reset({
-              nombre: resp.name,
-              descripcion: resp.description
+              name: resp.name,
+              description: resp.description
             })
             this.loading=false
           }
