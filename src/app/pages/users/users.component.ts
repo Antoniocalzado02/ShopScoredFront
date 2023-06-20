@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 export class UsersComponent {
 
   user!: User
-  name = localStorage.getItem('token');
+  name = localStorage.getItem('username');
 
   constructor(private usuarioService: userService) { }
 
