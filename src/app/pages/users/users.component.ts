@@ -26,6 +26,7 @@ export class UsersComponent {
       .subscribe({
         next: (resp) => {
           console.log(resp)
+          console.log(this.name)
           this.user = resp
         },
         error: (error) => {
