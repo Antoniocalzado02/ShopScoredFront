@@ -5,8 +5,8 @@
     }
 .profile 
 {
-/*    height: 321px;
-    width: 265px;*/
+ height: 321px;
+    width: 265px;
 margin-top: 2px;
 padding:1px;
     display: inline-block;
@@ -36,3 +36,7 @@ span.tags
     text-transform: initial;
 }
 
+.table{
+    align-items: center;
+
+}
