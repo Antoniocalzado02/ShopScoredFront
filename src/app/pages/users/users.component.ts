@@ -10,7 +10,8 @@ import Swal from 'sweetalert2';
 })
 export class UsersComponent {
 
-  lista: User[] = []
+  user!: User
+  name = localStorage.getItem('token');
 
   constructor(private usuarioService: userService) { }
 
@@ -21,10 +22,10 @@ export class UsersComponent {
 
   getUsuarios() {
     
-    this.usuarioService.getUsers()
+    this.usuarioService.getUser(this.name)
       .subscribe({
         next: (resp) => {
-          this.lista = resp
+          this.user = resp
         },
         error: (error) => {
           Swal.fire({
