@@ -40,3 +40,7 @@ span.tags
     align-items: center;
 
 }
+.row{
+    align-items: center;
+    text-align: center;
+}
