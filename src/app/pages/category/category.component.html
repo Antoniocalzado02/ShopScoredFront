@@ -20,8 +20,9 @@
             {{categoria.name}}
         </td>
         <td>{{ categoria.description }}</td>
-        <td><button class="btn btn-outline-primary" [routerLink]="['/pages/article',categoria.id]" routerLinkActive="router-link-active">Ver Articulos</button></td>
-        <td><button class="btn btn-outline-primary" [routerLink]="['/pages/editCategories',categoria.id]" routerLinkActive="router-link-active">Editar categoria</button></td>
+        <td><button class="btn btn-outline-primary" [routerLink]="['/pages/article',categoria.id]" routerLinkActive="router-link-active">Ver Articulos</button>
+            <button class="btn btn-outline-primary" [routerLink]="['/pages/editCategories',categoria.id]" routerLinkActive="router-link-active">Editar categoria</button>
+        </td>
         <td>
 
 
