@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validator} from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
@@ -21,6 +21,7 @@ export class CategoryComponent implements OnInit {
 
   lista:Content[]=[]
 
+  @Input() article: Content[] = []
 
   dtOptions: DataTables.Settings = {};
   posts: any;
