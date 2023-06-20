@@ -10,21 +10,22 @@ import Swal from 'sweetalert2';
 })
 export class UsersComponent {
 
-  user!: User
+  user!: User;
   name = localStorage.getItem('username');
 
   constructor(private usuarioService: userService) { }
 
   ngOnInit(): void {
-    this.getUsuarios()
+    this.getUsuario()
 
   }
 
-  getUsuarios() {
+  getUsuario() {
     
     this.usuarioService.getUser(this.name)
       .subscribe({
         next: (resp) => {
+          console.log(resp)
           this.user = resp
         },
         error: (error) => {
