@@ -32,6 +32,10 @@ import { DecodeToken } from '../interfaces/decode-token.interface';
         return this.http.get<any>(this.url+"/"+username)
       }
 
+    getUsers():Observable<any>{
+      return this.http.get<any>(this.url+"/getUsers")
+    }
+    
     updateImage(username:string,image:File){
       return this.http.post<any>(this.urls+"/"+username,{"file":image} ,this.httpOptions)
       .pipe(switchMap(resp=>{

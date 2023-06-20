@@ -12,6 +12,7 @@ import { AddArticuloComponent } from './add-articulo/add-articulo.component';
 import { EditArticuloComponent } from './edit-articulo/edit-articulo.component';
 import { UpdateImageComponent } from './update-image/update-image.component';
 import { EditCategoriesComponent } from './edit-categories/edit-categories.component';
+import { UsersComponent } from './users/users.component';
 
 
 
@@ -28,7 +29,8 @@ import { EditCategoriesComponent } from './edit-categories/edit-categories.compo
     AddArticuloComponent,
     EditArticuloComponent,
     UpdateImageComponent,
-    EditCategoriesComponent
+    EditCategoriesComponent,
+    UsersComponent
   ],
   imports: [
     CommonModule,

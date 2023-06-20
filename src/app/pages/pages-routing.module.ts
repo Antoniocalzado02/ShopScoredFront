@@ -9,6 +9,7 @@ import { CategoryComponent } from './category/category.component';
 import { EditArticuloComponent } from './edit-articulo/edit-articulo.component';
 import { UpdateImageComponent } from './update-image/update-image.component';
 import { EditCategoriesComponent } from './edit-categories/edit-categories.component';
+import { UsersComponent } from './users/users.component';
 
 
 const routes: Routes = [
@@ -55,6 +56,11 @@ const routes: Routes = [
     {
         path: 'editCategories/:id',
         component: EditCategoriesComponent,
+        pathMatch: 'full'
+    },
+    {
+        path: 'users',
+        component: UsersComponent,
         pathMatch: 'full'
     }
 

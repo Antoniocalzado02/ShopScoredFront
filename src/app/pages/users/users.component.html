@@ -1,0 +1,28 @@
+
+
+<div class="productos-home-1">
+    <p class="titulo-productos">Listado de usuarios</p>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Rol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of lista">
+                <td>{{ usuario.username }}</td>
+                <td>
+                    {{usuario.name}}
+                </td>
+                <td>{{ usuario.email }}</td>
+                <td>
+                    {{ usuario.role }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
