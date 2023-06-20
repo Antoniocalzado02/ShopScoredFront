@@ -38,9 +38,15 @@ span.tags
 
 .table{
     align-items: center;
+    align-content: center;
 
 }
 .row{
     align-items: center;
     text-align: center;
+    align-content: flex-end;
+    padding-left: 30%;
+   padding-top: 3%;
+   padding-bottom: 3%;
+
 }

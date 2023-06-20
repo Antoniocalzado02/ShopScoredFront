@@ -10,11 +10,12 @@
             <h4><a [routerLink]="['/pages/category']" routerLinkActive="router-link-active" class="nav-item active nav-link">Catalogo</a></h4>
             </div>
             <h4><a href="#" [routerLink]="['/pages/article']" routerLinkActive="router-link-active" class="nav item active nav-link">Articulos</a></h4>
-            <div *ngIf="isLoggedIn()">
-                <a href="#" [routerLink]="['/pages/updateImage',username]" routerLinkActive="router-link-active" class="nav item active nav-link"><h4>Editar foto</h4></a>      
-            </div>
-            <div *ngIf="isLoggedIn()">
-                <a href="#" [routerLink]="['/pages/users']" routerLinkActive="router-link-active" class="nav item active nav-link"><h4>Ver usuario</h4></a>      
+            <div class="dropdown" *ngIf="isLoggedIn()">
+                <button class="bi"><h4>Ver↧</h4></button>
+                <div class="dropdown-content">
+                    <button class="b"><a href="#" [routerLink]="['/pages/updateImage',username]" routerLinkActive="router-link-active" class="nav item active nav-link"><h4>Editar foto</h4></a></button>   
+                    <button class="b"><a href="#" [routerLink]="['/pages/users']" routerLinkActive="router-link-active" class="nav item active nav-link"><h4>Ver usuario</h4></a></button>    
+                </div>
             </div>
             
         </ul>
