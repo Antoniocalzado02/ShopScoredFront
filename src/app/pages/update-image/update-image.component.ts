@@ -37,7 +37,7 @@ export class UpdateImageComponent {
       this.userService.getUser(username)
       .subscribe({
         next:(resp)=>{
-          this.user=resp.User
+          this.user=resp
         }
       })
     }

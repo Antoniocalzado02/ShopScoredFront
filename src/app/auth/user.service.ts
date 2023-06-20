@@ -5,6 +5,7 @@ import { AuthResponse } from '../interfaces/token.interface';
 import { Token } from '@angular/compiler';
 import jwt_decode from "jwt-decode";
 import { DecodeToken } from '../interfaces/decode-token.interface';
+import { User } from '../interfaces/user.interface';
 
 @Injectable({
     providedIn: 'root'
@@ -28,8 +29,8 @@ import { DecodeToken } from '../interfaces/decode-token.interface';
 
     
 
-    getUser(username:string | null):Observable<any>{
-        return this.http.get<any>(this.url+"/"+username)
+    getUser(username:string | null):Observable<User>{
+        return this.http.get<User>(this.url+"/"+username)
       }
 
     getUsers():Observable<any>{
