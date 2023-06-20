@@ -14,6 +14,7 @@ import { User } from '../interfaces/user.interface';
   export class userService{
 
     url:string = 'https://shopscoredapi-production.up.railway.app/userGet'
+    urlss:string = 'https://shopscoredapi-production.up.railway.app/getUser'
     urls:string='https://shopscoredapi-production.up.railway.app/updateImage'
     httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -30,7 +31,7 @@ import { User } from '../interfaces/user.interface';
     
 
     getUser(username:string | null):Observable<User>{
-        return this.http.get<User>(this.url+"/"+username)
+        return this.http.get<User>(this.urlss+"/"+username)
       }
 
     getUsers():Observable<any>{
