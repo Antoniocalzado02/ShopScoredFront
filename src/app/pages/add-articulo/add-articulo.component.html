@@ -46,10 +46,11 @@
         <div>
         <label>Nombre categoria</label>
         <select formControlName="idCategory" >
-            <option *ngFor="let categoria of lista" [value]="categoria.id">{{categoria.name}}<p class="form-text text-danger"
+            <option *ngFor="let categoria of lista" [value]="categoria.id">{{categoria.name}}</option>
+            <p class="form-text text-danger"
               *ngIf="isValidField('idCategory')">
                   Campo requerido
-          </p></option>
+            </p>
         </select>
         </div>
         <div class="grid-botones">
