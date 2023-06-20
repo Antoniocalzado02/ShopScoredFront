@@ -45,13 +45,15 @@
         </div>
         <div>
         <label>Nombre categoria</label>
+        <div>
         <select formControlName="idCategory" >
             <option *ngFor="let categoria of lista" [value]="categoria.id">{{categoria.name}}</option>
-            <p class="form-text text-danger"
+        </select>
+        <p class="form-text text-danger"
               *ngIf="isValidField('idCategory')">
                   Campo requerido
             </p>
-        </select>
+      </div>
         </div>
         <div class="grid-botones">
           <button class="boton" type="submit">Guardar cambios</button>
