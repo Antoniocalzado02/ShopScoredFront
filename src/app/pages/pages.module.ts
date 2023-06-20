@@ -17,6 +17,7 @@ import { EditCategoriesComponent } from './edit-categories/edit-categories.compo
 
 
 
+
 @NgModule({
   declarations: [
     CategoryComponent,

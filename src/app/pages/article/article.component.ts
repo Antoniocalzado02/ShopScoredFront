@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { articlesService } from 'src/app/auth/article.service';
 import { Content } from 'src/app/interfaces/articles.interface';
@@ -14,6 +14,7 @@ export class ArticleComponent implements OnInit {
   constructor(private articleService:articlesService, private activateRouter:ActivatedRoute) { }
 
   lista:Content[]=[]
+  @Input() article: Content[] = []
 
 idCategory!: number;
 
