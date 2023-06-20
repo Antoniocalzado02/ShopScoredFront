@@ -53,7 +53,7 @@ console.log(this.idProducto)
               title: 'Oops...',
               text: 'Algo ha ido mal'
             }).then((resp) => {
-              this.route.navigateByUrl('/products/all')
+              this.route.navigateByUrl('/pages/article')
             })
           }
         },
@@ -63,7 +63,7 @@ console.log(this.idProducto)
             title: 'Oops...',
             text: 'Algo ha ido mal'
           }).then((resp) => {
-            this.route.navigateByUrl('/products/all')
+            this.route.navigateByUrl('/pages/article')
           })
         }
       })

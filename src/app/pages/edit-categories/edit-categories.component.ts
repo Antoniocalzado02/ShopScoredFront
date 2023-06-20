@@ -39,7 +39,7 @@ export class EditCategoriesComponent {
               text: 'Algo ha ido mal'
             }).then((resp) => {
               this.loading=false
-              this.route.navigateByUrl('/categoria')
+              this.route.navigateByUrl('/pages/category')
             })
           }
         }, error: (error) => {
@@ -49,7 +49,7 @@ export class EditCategoriesComponent {
             text: 'Algo ha ido mal'
           }).then((resp) => {
             this.loading=false
-            this.route.navigateByUrl('/categoria')
+            this.route.navigateByUrl('/pages/category')
           })
         }
       })
@@ -74,7 +74,7 @@ export class EditCategoriesComponent {
             text: 'Algo ha ido mal'
           }).then((resp) => {
             this.loading=false
-            this.route.navigateByUrl('/categoria')
+            this.route.navigateByUrl('/pages/category')
           })
         }
       }, error: (error) => {
@@ -84,7 +84,7 @@ export class EditCategoriesComponent {
           text: 'Algo ha ido mal'
         }).then((resp) => {
           this.loading=false
-          this.route.navigateByUrl('/categoria')
+          this.route.navigateByUrl('/pages/category')
         })
       }
     })
