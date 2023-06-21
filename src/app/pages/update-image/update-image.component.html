@@ -1,11 +1,17 @@
-<div class="container-login">
-    <div class="container-form">
-      <p class="titulo-login">Nuevo Foto de perfil</p>
-        <label>Nuevo Foto de perfil</label>
-        <form (ngSubmit)="updateImage()" #imageForm="ngForm">
-          <input type="file" name="image" (change)="onFileSelected($event)" formControlName="image" />
-          <button type="submit">Subir imagen</button>
-        </form>
-        
-    </div>
+
+<div class="card">
+  <div class="card-body">
+    <div class="container-login">
+      <div class="container-form">
+        <p class="titulo-login">Nuevo Foto de perfil</p>
+          <label>Nuevo Foto de perfil</label>
+          <form (ngSubmit)="updateImage()" #imageForm="ngForm">
+            <input type="file" name="image" (change)="onFileSelected($event)" formControlName="image" />
+            <button type="submit">Subir imagen</button>
+          </form>
+          
+      </div>
+  </div>
+  </div>
+ 
 </div>

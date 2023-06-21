@@ -11,7 +11,7 @@
             </div>
             <h4><a href="#" [routerLink]="['/pages/article']" routerLinkActive="router-link-active" class="nav item active nav-link">Articulos</a></h4>
             <div class="dropdown" *ngIf="isLoggedIn()">
-                <button class="bi"><h4>Usuario↧</h4></button>
+                <h4 class="bi">Usuario↧</h4>
                 <div class="dropdown-content">
                     <button class="b"><a href="#" [routerLink]="['/pages/updateImage',username]" routerLinkActive="router-link-active" class="nav item active nav-link"><h4>Editar foto</h4></a></button>   
                     <button class="b"><a href="#" [routerLink]="['/pages/users']" routerLinkActive="router-link-active" class="nav item active nav-link"><h4>Ver usuario</h4></a></button>    
